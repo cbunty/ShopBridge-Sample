@@ -1,0 +1,75 @@
+2023-03-02 18:50:02.992 +05:30 [INF] Configuring web host (ShopBridge)...
+2023-03-02 18:50:04.826 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-03-02 18:50:04.830 +05:30 [INF] Hosting environment: Development
+2023-03-02 18:50:04.830 +05:30 [INF] Content root path: D:\Officials\Projects\ShopBridge\ShopBridge.API
+2023-03-02 18:50:04.861 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44334/swagger/index.html - -
+2023-03-02 18:50:05.029 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44334/swagger/index.html - - - 200 - text/html;charset=utf-8 171.9640ms
+2023-03-02 18:50:05.671 +05:30 [INF] Entity Framework Core 5.0.17 initialized 'ShopBridgeContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2023-03-02 18:50:05.835 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44334/swagger/v1/swagger.json - -
+2023-03-02 18:50:05.973 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44334/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 138.3362ms
+2023-03-02 18:50:06.116 +05:30 [INF] Executed DbCommand (21ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-03-02 18:50:06.143 +05:30 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-03-02 18:50:06.146 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-03-02 18:50:06.147 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-03-02 18:50:06.161 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2023-03-02 18:50:06.177 +05:30 [INF] No migrations were applied. The database is already up to date.
+2023-03-02 18:50:23.138 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44334/api/Product/22 - -
+2023-03-02 18:50:23.172 +05:30 [INF] Executing endpoint 'ShopBridge.API.Controllers.ProductController.Product (ShopBridge.API)'
+2023-03-02 18:50:23.199 +05:30 [INF] Route matched with {action = "Product", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[ShopBridge.Domain.DTO.Response.ProductResponseModel] Product(Int32) on controller ShopBridge.API.Controllers.ProductController (ShopBridge.API).
+2023-03-02 18:50:23.224 +05:30 [INF] Entity Framework Core 5.0.17 initialized 'ShopBridgeContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2023-03-02 18:50:23.625 +05:30 [INF] Executed DbCommand (33ms) [Parameters=[@__productId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[CreatedBy], [p].[ModifiedBy], [p].[CreatedOn], [p].[ModifiedOn], CASE
+    WHEN [s].[Id] IS NULL THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END, [s].[Id], [s].[Name], [p].[Id], [p].[Name], [p].[Description], [p].[Price], [p].[Quantity]
+FROM [Products] AS [p]
+LEFT JOIN [Status] AS [s] ON [p].[StatusId] = [s].[Id]
+WHERE [p].[Id] = @__productId_0
+2023-03-02 18:50:23.665 +05:30 [INF] Executing ObjectResult, writing value of type 'null'.
+2023-03-02 18:50:23.670 +05:30 [INF] Executed action ShopBridge.API.Controllers.ProductController.Product (ShopBridge.API) in 466.437ms
+2023-03-02 18:50:23.671 +05:30 [INF] Executed endpoint 'ShopBridge.API.Controllers.ProductController.Product (ShopBridge.API)'
+2023-03-02 18:50:23.675 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44334/api/Product/22 - - - 204 0 - 537.0796ms
+2023-03-02 18:53:03.291 +05:30 [INF] Configuring web host (ShopBridge)...
+2023-03-02 18:53:05.663 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-03-02 18:53:05.665 +05:30 [INF] Hosting environment: Development
+2023-03-02 18:53:05.666 +05:30 [INF] Content root path: D:\Officials\Projects\ShopBridge\ShopBridge.API
+2023-03-02 18:53:05.685 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44334/swagger/index.html - -
+2023-03-02 18:53:05.854 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44334/swagger/index.html - - - 200 - text/html;charset=utf-8 175.6089ms
+2023-03-02 18:53:06.374 +05:30 [INF] Entity Framework Core 5.0.17 initialized 'ShopBridgeContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2023-03-02 18:53:06.727 +05:30 [INF] Executed DbCommand (20ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-03-02 18:53:06.756 +05:30 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-03-02 18:53:06.761 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-03-02 18:53:06.762 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-03-02 18:53:06.771 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44334/swagger/v1/swagger.json - -
+2023-03-02 18:53:06.779 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2023-03-02 18:53:06.798 +05:30 [INF] No migrations were applied. The database is already up to date.
+2023-03-02 18:53:06.865 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44334/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 93.9263ms
+2023-03-02 18:53:07.532 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44334/api/Product/22 - -
+2023-03-02 18:53:07.569 +05:30 [INF] Executing endpoint 'ShopBridge.API.Controllers.ProductController.Product (ShopBridge.API)'
+2023-03-02 18:53:07.596 +05:30 [INF] Route matched with {action = "Product", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[ShopBridge.Domain.DTO.Response.ProductResponseModel] Product(Int32) on controller ShopBridge.API.Controllers.ProductController (ShopBridge.API).
+2023-03-02 18:53:08.160 +05:30 [INF] Entity Framework Core 5.0.17 initialized 'ShopBridgeContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2023-03-02 18:53:08.548 +05:30 [INF] Executed DbCommand (28ms) [Parameters=[@__productId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[CreatedBy], [p].[ModifiedBy], [p].[CreatedOn], [p].[ModifiedOn], CASE
+    WHEN [s].[Id] IS NULL THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END, [s].[Id], [s].[Name], [p].[Id], [p].[Name], [p].[Description], [p].[Price], [p].[Quantity]
+FROM [Products] AS [p]
+LEFT JOIN [Status] AS [s] ON [p].[StatusId] = [s].[Id]
+WHERE [p].[Id] = @__productId_0
+2023-03-02 18:53:08.707 +05:30 [INF] Executed action ShopBridge.API.Controllers.ProductController.Product (ShopBridge.API) in 1105.2156ms
+2023-03-02 18:53:08.709 +05:30 [INF] Executed endpoint 'ShopBridge.API.Controllers.ProductController.Product (ShopBridge.API)'
+2023-03-02 18:53:08.898 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44334/api/Product/22 - - - 404 - application/json 1365.8887ms

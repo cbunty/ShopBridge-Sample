@@ -1,0 +1,199 @@
+2023-03-03 08:37:45.287 +05:30 [INF] Configuring web host (ShopBridge)...
+2023-03-03 08:37:48.750 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-03-03 08:37:48.757 +05:30 [INF] Hosting environment: Development
+2023-03-03 08:37:48.769 +05:30 [INF] Content root path: D:\Proj\ShopBridge\ShopBridge.API
+2023-03-03 08:37:48.843 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44334/swagger - -
+2023-03-03 08:37:49.019 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44334/swagger/index.html - -
+2023-03-03 08:37:49.046 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44334/swagger - - - 301 - - 209.8336ms
+2023-03-03 08:37:49.470 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44334/swagger/index.html - - - 200 - text/html;charset=utf-8 451.0168ms
+2023-03-03 08:37:49.472 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44334/swagger/swagger-ui.css - -
+2023-03-03 08:37:49.472 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44334/swagger/swagger-ui-bundle.js - -
+2023-03-03 08:37:49.473 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44334/swagger/swagger-ui-standalone-preset.js - -
+2023-03-03 08:37:49.473 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44334/_framework/aspnetcore-browser-refresh.js - -
+2023-03-03 08:37:49.479 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44334/_framework/aspnetcore-browser-refresh.js - - - 200 11998 application/javascript;+charset=utf-8 5.6587ms
+2023-03-03 08:37:49.484 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44334/_vs/browserLink - -
+2023-03-03 08:37:49.506 +05:30 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2023-03-03 08:37:49.506 +05:30 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2023-03-03 08:37:49.509 +05:30 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2023-03-03 08:37:49.511 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44334/swagger/swagger-ui.css - - - 200 142933 text/css 39.1897ms
+2023-03-03 08:37:49.526 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44334/swagger/swagger-ui-standalone-preset.js - - - 200 311804 application/javascript 53.2393ms
+2023-03-03 08:37:49.567 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44334/swagger/swagger-ui-bundle.js - - - 200 986342 application/javascript 94.6016ms
+2023-03-03 08:37:49.588 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44334/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 104.6566ms
+2023-03-03 08:37:50.104 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44334/swagger/v1/swagger.json - -
+2023-03-03 08:37:50.250 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44334/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 146.1239ms
+2023-03-03 08:37:50.419 +05:30 [INF] Entity Framework Core 5.0.17 initialized 'ShopBridgeContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2023-03-03 08:37:52.349 +05:30 [INF] Executed DbCommand (501ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+CREATE DATABASE [ShobBridge];
+2023-03-03 08:37:52.554 +05:30 [INF] Executed DbCommand (198ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [ShobBridge] SET READ_COMMITTED_SNAPSHOT ON;
+END;
+2023-03-03 08:37:52.606 +05:30 [INF] Executed DbCommand (22ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-03-03 08:37:52.853 +05:30 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [__EFMigrationsHistory] (
+    [MigrationId] nvarchar(150) NOT NULL,
+    [ProductVersion] nvarchar(32) NOT NULL,
+    CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+);
+2023-03-03 08:37:52.857 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-03-03 08:37:52.908 +05:30 [INF] Executed DbCommand (42ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-03-03 08:37:52.920 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2023-03-03 08:37:52.966 +05:30 [INF] Applying migration '20230302080427_Initial'.
+2023-03-03 08:37:53.085 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Status] (
+    [Id] tinyint NOT NULL,
+    [Name] VARCHAR(50) NULL,
+    [CreatedBy] VARCHAR(200) NULL,
+    [ModifiedBy] VARCHAR(200) NULL,
+    [CreatedOn] datetime2 NOT NULL,
+    [ModifiedOn] datetime2 NOT NULL,
+    CONSTRAINT [PK_Status] PRIMARY KEY ([Id])
+);
+2023-03-03 08:37:53.094 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Products] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] varchar(500) NOT NULL,
+    [Description] nvarchar(2000) NULL,
+    [Price] decimal(18,2) NOT NULL,
+    [Quantity] int NOT NULL,
+    [CreatedBy] VARCHAR(200) NULL,
+    [ModifiedBy] VARCHAR(200) NULL,
+    [CreatedOn] datetime2 NOT NULL,
+    [ModifiedOn] datetime2 NOT NULL,
+    [StatusId] tinyint NULL,
+    CONSTRAINT [PK_Products] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Products_Status_StatusId] FOREIGN KEY ([StatusId]) REFERENCES [Status] ([Id]) ON DELETE NO ACTION
+);
+2023-03-03 08:37:53.164 +05:30 [INF] Executed DbCommand (70ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'CreatedBy', N'CreatedOn', N'ModifiedBy', N'ModifiedOn', N'Name') AND [object_id] = OBJECT_ID(N'[Status]'))
+    SET IDENTITY_INSERT [Status] ON;
+INSERT INTO [Status] ([Id], [CreatedBy], [CreatedOn], [ModifiedBy], [ModifiedOn], [Name])
+VALUES (CAST(1 AS tinyint), NULL, '0001-01-01T00:00:00.0000000', NULL, '0001-01-01T00:00:00.0000000', 'Active');
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'CreatedBy', N'CreatedOn', N'ModifiedBy', N'ModifiedOn', N'Name') AND [object_id] = OBJECT_ID(N'[Status]'))
+    SET IDENTITY_INSERT [Status] OFF;
+2023-03-03 08:37:53.182 +05:30 [INF] Executed DbCommand (17ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'CreatedBy', N'CreatedOn', N'ModifiedBy', N'ModifiedOn', N'Name') AND [object_id] = OBJECT_ID(N'[Status]'))
+    SET IDENTITY_INSERT [Status] ON;
+INSERT INTO [Status] ([Id], [CreatedBy], [CreatedOn], [ModifiedBy], [ModifiedOn], [Name])
+VALUES (CAST(2 AS tinyint), NULL, '0001-01-01T00:00:00.0000000', NULL, '0001-01-01T00:00:00.0000000', 'InActive');
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'CreatedBy', N'CreatedOn', N'ModifiedBy', N'ModifiedOn', N'Name') AND [object_id] = OBJECT_ID(N'[Status]'))
+    SET IDENTITY_INSERT [Status] OFF;
+2023-03-03 08:37:53.193 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Products_StatusId] ON [Products] ([StatusId]);
+2023-03-03 08:37:53.196 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20230302080427_Initial', N'5.0.17');
+2023-03-03 08:39:02.663 +05:30 [INF] Request starting HTTP/2 POST https://localhost:44334/api/Product application/json 95
+2023-03-03 08:39:02.737 +05:30 [INF] Executing endpoint 'ShopBridge.API.Controllers.ProductController.Product (ShopBridge.API)'
+2023-03-03 08:39:02.806 +05:30 [INF] Route matched with {action = "Product", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[ShopBridge.Domain.DTO.Response.ProductResponseModel] Product(ShopBridge.Domain.DTO.Request.ProductRequestModel) on controller ShopBridge.API.Controllers.ProductController (ShopBridge.API).
+2023-03-03 08:39:02.990 +05:30 [INF] Entity Framework Core 5.0.17 initialized 'ShopBridgeContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2023-03-03 08:39:03.547 +05:30 [INF] Executed DbCommand (69ms) [Parameters=[@__productRequestModel_Name_0='?' (Size = 500) (DbType = AnsiString), @__productRequestModel_Id_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Products] AS [p]
+        WHERE (([p].[Name] = @__productRequestModel_Name_0) AND ([p].[StatusId] = CAST(1 AS tinyint))) AND ([p].[Id] <> @__productRequestModel_Id_1)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2023-03-03 08:39:04.027 +05:30 [INF] Executed DbCommand (30ms) [Parameters=[@p0='?' (Size = 200) (DbType = AnsiString), @p1='?' (DbType = DateTime2), @p2='?' (Size = 2000), @p3='?' (Size = 200) (DbType = AnsiString), @p4='?' (DbType = DateTime2), @p5='?' (Size = 500) (DbType = AnsiString), @p6='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p7='?' (DbType = Int32), @p8='?' (Size = 1) (DbType = Byte)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Products] ([CreatedBy], [CreatedOn], [Description], [ModifiedBy], [ModifiedOn], [Name], [Price], [Quantity], [StatusId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8);
+SELECT [Id]
+FROM [Products]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2023-03-03 08:39:04.373 +05:30 [INF] Executed DbCommand (13ms) [Parameters=[@__productId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[CreatedBy], [p].[ModifiedBy], [p].[CreatedOn], [p].[ModifiedOn], CASE
+    WHEN [s].[Id] IS NULL THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END, [s].[Id], [s].[Name], [p].[Id], [p].[Name], [p].[Description], [p].[Price], [p].[Quantity]
+FROM [Products] AS [p]
+LEFT JOIN [Status] AS [s] ON [p].[StatusId] = [s].[Id]
+WHERE [p].[Id] = @__productId_0
+2023-03-03 08:39:04.411 +05:30 [INF] Executing ObjectResult, writing value of type 'ShopBridge.Domain.DTO.Response.ProductResponseModel'.
+2023-03-03 08:39:04.453 +05:30 [INF] Executed action ShopBridge.API.Controllers.ProductController.Product (ShopBridge.API) in 1635.7646ms
+2023-03-03 08:39:04.454 +05:30 [INF] Executed endpoint 'ShopBridge.API.Controllers.ProductController.Product (ShopBridge.API)'
+2023-03-03 08:39:04.458 +05:30 [INF] Request finished HTTP/2 POST https://localhost:44334/api/Product application/json 95 - 200 - application/json;+charset=utf-8 1794.7139ms
+2023-03-03 08:39:42.866 +05:30 [INF] Request starting HTTP/2 PUT https://localhost:44334/api/Product/1 application/json 97
+2023-03-03 08:39:42.867 +05:30 [INF] Executing endpoint 'ShopBridge.API.Controllers.ProductController.Product (ShopBridge.API)'
+2023-03-03 08:39:42.895 +05:30 [INF] Route matched with {action = "Product", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[ShopBridge.Domain.DTO.Response.ProductResponseModel] Product(Int32, ShopBridge.Domain.DTO.Request.ProductRequestModel) on controller ShopBridge.API.Controllers.ProductController (ShopBridge.API).
+2023-03-03 08:39:42.989 +05:30 [INF] Entity Framework Core 5.0.17 initialized 'ShopBridgeContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2023-03-03 08:39:43.027 +05:30 [INF] Executed DbCommand (12ms) [Parameters=[@__productRequestModel_Name_0='?' (Size = 500) (DbType = AnsiString), @__productRequestModel_Id_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Products] AS [p]
+        WHERE (([p].[Name] = @__productRequestModel_Name_0) AND ([p].[StatusId] = CAST(1 AS tinyint))) AND ([p].[Id] <> @__productRequestModel_Id_1)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2023-03-03 08:39:43.073 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[CreatedBy], [p].[CreatedOn], [p].[Description], [p].[ModifiedBy], [p].[ModifiedOn], [p].[Name], [p].[Price], [p].[Quantity], [p].[StatusId]
+FROM [Products] AS [p]
+WHERE [p].[Id] = @__id_0
+2023-03-03 08:39:43.125 +05:30 [INF] Executed DbCommand (29ms) [Parameters=[@p9='?' (DbType = Int32), @p0='?' (Size = 200) (DbType = AnsiString), @p1='?' (DbType = DateTime2), @p2='?' (Size = 2000), @p3='?' (Size = 200) (DbType = AnsiString), @p4='?' (DbType = DateTime2), @p5='?' (Size = 500) (DbType = AnsiString), @p6='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p7='?' (DbType = Int32), @p8='?' (Size = 1) (DbType = Byte)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Products] SET [CreatedBy] = @p0, [CreatedOn] = @p1, [Description] = @p2, [ModifiedBy] = @p3, [ModifiedOn] = @p4, [Name] = @p5, [Price] = @p6, [Quantity] = @p7, [StatusId] = @p8
+WHERE [Id] = @p9;
+SELECT @@ROWCOUNT;
+2023-03-03 08:39:43.139 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__productId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[CreatedBy], [p].[ModifiedBy], [p].[CreatedOn], [p].[ModifiedOn], CASE
+    WHEN [s].[Id] IS NULL THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END, [s].[Id], [s].[Name], [p].[Id], [p].[Name], [p].[Description], [p].[Price], [p].[Quantity]
+FROM [Products] AS [p]
+LEFT JOIN [Status] AS [s] ON [p].[StatusId] = [s].[Id]
+WHERE [p].[Id] = @__productId_0
+2023-03-03 08:39:43.140 +05:30 [INF] Executing ObjectResult, writing value of type 'ShopBridge.Domain.DTO.Response.ProductResponseModel'.
+2023-03-03 08:39:43.141 +05:30 [INF] Executed action ShopBridge.API.Controllers.ProductController.Product (ShopBridge.API) in 244.8048ms
+2023-03-03 08:39:43.141 +05:30 [INF] Executed endpoint 'ShopBridge.API.Controllers.ProductController.Product (ShopBridge.API)'
+2023-03-03 08:39:43.141 +05:30 [INF] Request finished HTTP/2 PUT https://localhost:44334/api/Product/1 application/json 97 - 200 - application/json;+charset=utf-8 274.7644ms
+2023-03-03 08:39:59.749 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44334/api/Product/1 - -
+2023-03-03 08:39:59.749 +05:30 [INF] Executing endpoint 'ShopBridge.API.Controllers.ProductController.Product (ShopBridge.API)'
+2023-03-03 08:39:59.756 +05:30 [INF] Route matched with {action = "Product", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[ShopBridge.Domain.DTO.Response.ProductResponseModel] Product(Int32) on controller ShopBridge.API.Controllers.ProductController (ShopBridge.API).
+2023-03-03 08:39:59.763 +05:30 [INF] Entity Framework Core 5.0.17 initialized 'ShopBridgeContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2023-03-03 08:39:59.774 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[@__productId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[CreatedBy], [p].[ModifiedBy], [p].[CreatedOn], [p].[ModifiedOn], CASE
+    WHEN [s].[Id] IS NULL THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END, [s].[Id], [s].[Name], [p].[Id], [p].[Name], [p].[Description], [p].[Price], [p].[Quantity]
+FROM [Products] AS [p]
+LEFT JOIN [Status] AS [s] ON [p].[StatusId] = [s].[Id]
+WHERE [p].[Id] = @__productId_0
+2023-03-03 08:39:59.775 +05:30 [INF] Executing ObjectResult, writing value of type 'ShopBridge.Domain.DTO.Response.ProductResponseModel'.
+2023-03-03 08:39:59.776 +05:30 [INF] Executed action ShopBridge.API.Controllers.ProductController.Product (ShopBridge.API) in 19.5718ms
+2023-03-03 08:39:59.776 +05:30 [INF] Executed endpoint 'ShopBridge.API.Controllers.ProductController.Product (ShopBridge.API)'
+2023-03-03 08:39:59.777 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44334/api/Product/1 - - - 200 - application/json;+charset=utf-8 27.3761ms
+2023-03-03 08:40:27.474 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44334/api/Product - -
+2023-03-03 08:40:27.475 +05:30 [INF] Executing endpoint 'ShopBridge.API.Controllers.ProductController.Product (ShopBridge.API)'
+2023-03-03 08:40:27.490 +05:30 [INF] Route matched with {action = "Product", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[ShopBridge.Domain.DTO.Response.PagedResults`1[ShopBridge.Domain.DTO.Response.ProductResponseModel]] Product(ShopBridge.Domain.DTO.Request.PageRequest) on controller ShopBridge.API.Controllers.ProductController (ShopBridge.API).
+2023-03-03 08:40:27.507 +05:30 [INF] Entity Framework Core 5.0.17 initialized 'ShopBridgeContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2023-03-03 08:40:27.544 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Products] AS [p]
+WHERE [p].[StatusId] = CAST(1 AS tinyint)
+2023-03-03 08:40:27.571 +05:30 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
+2023-03-03 08:40:27.572 +05:30 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
+2023-03-03 08:40:27.615 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[CreatedBy], [t].[ModifiedBy], [t].[CreatedOn], [t].[ModifiedOn], CASE
+    WHEN [s].[Id] IS NULL THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END, [s].[Id], [s].[Name], [t].[Id], [t].[Name], [t].[Description], [t].[Price], [t].[Quantity]
+FROM (
+    SELECT [p].[Id], [p].[CreatedBy], [p].[CreatedOn], [p].[Description], [p].[ModifiedBy], [p].[ModifiedOn], [p].[Name], [p].[Price], [p].[Quantity], [p].[StatusId]
+    FROM [Products] AS [p]
+    WHERE [p].[StatusId] = CAST(1 AS tinyint)
+    ORDER BY (SELECT 1)
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+LEFT JOIN [Status] AS [s] ON [t].[StatusId] = [s].[Id]
+2023-03-03 08:40:27.618 +05:30 [INF] Executing ObjectResult, writing value of type 'ShopBridge.Domain.DTO.Response.PagedResults`1[[ShopBridge.Domain.DTO.Response.ProductResponseModel, ShopBridge.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-03-03 08:40:27.621 +05:30 [INF] Executed action ShopBridge.API.Controllers.ProductController.Product (ShopBridge.API) in 130.69ms
+2023-03-03 08:40:27.621 +05:30 [INF] Executed endpoint 'ShopBridge.API.Controllers.ProductController.Product (ShopBridge.API)'
+2023-03-03 08:40:27.622 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44334/api/Product - - - 200 - application/json;+charset=utf-8 147.3691ms
